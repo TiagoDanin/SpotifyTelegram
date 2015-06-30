@@ -7,20 +7,21 @@ local function get_spotify(Track)
   local url = BASE_URL
   url = url..'?q='..Track..'&type=track&limit=10'
 
-  local b, c, h = http.request(url)
-  if c ~= 200 then return nil end
+  local dec, t, h = http.request(url)
+  if t ~= 200 then return nil end
 
-  local spotify = json:decode(b)
-  local Track = name.name
+  local spotify = json:decode(dec)
+  local Track = tracks.items.name
+  local Surl = tracks.items.external_urls
 end
 
 local function run(msg, matches)
   local Track = ''
 
   if matches[1] ~= '!spotift' then 
-    Track = matches[1]
+    STrack = matches[1]
   end
-  local text = get_spotify(Track)
+  local text = get_spotify(STrack)..Surl
   if not text then
     text = 'Erro'
   end
@@ -29,7 +30,7 @@ end
 
 return {
   description = "Track spotify", 
-  usage = "!spotify (Track)",
+  usage = "!spotify (STrack)",
   patterns = {
     "^!spotify$",
     "^!spotify (.*)$"
