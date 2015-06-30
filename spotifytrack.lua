@@ -7,10 +7,10 @@ local function get_spotify(STrack)
   local url = BASE_URL
   url = url..'?q='..STrack..'&type=track&limit=10'
 
-  local dec, t, h = http.request(url)
-  if t ~= 200 then return nil end
+  local decj, tim, h = http.request(url)
+  if tim ~= 200 then return nil end
 
-  local spotify = json:decode(dec)
+  local spotify = json:decode(decj)
   local Track = tracks.items.name
   local Surl = tracks.items.external_urls
 end
