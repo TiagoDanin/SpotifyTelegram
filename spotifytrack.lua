@@ -21,7 +21,7 @@ local function run(msg, matches)
   if matches[1] ~= '!spotify' then 
     Track = matches[1]
   end
-  local text = get_spotify(STrack)..Surl
+  local text = get_spotify(Track)..Surl
   if not text then
     text = 'Erro'
   end
@@ -30,7 +30,7 @@ end
 
 return {
   description = "Track spotify", 
-  usage = "!spotify (STrack)",
+  usage = "!spotify (Track)",
   patterns = {
     "^!spotify$",
     "^!spotify (.*)$"
