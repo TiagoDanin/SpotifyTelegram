@@ -34,7 +34,6 @@ return {
   patterns = {
     "^!spotify$",
     "^!spotify (.*)$"
-    "^%.[s|S]potify (.*)$"
   }, 
   run = run 
 }
