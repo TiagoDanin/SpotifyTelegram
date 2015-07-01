@@ -11,8 +11,8 @@ local function get_spotify(STrack)
   if tim ~= 200 then return nil end
 
   local spotify = json:decode(decj)
-  local Track = tracks.items.name
-  local Surl = tracks.items.external_urls
+  local Track = spotify.tracks.items.name
+  local Surl = spotify.tracks.items.external_urls
   local resu = 'Track is '..Track..' URL: '..Surl
   
   return resu
