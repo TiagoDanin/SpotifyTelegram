@@ -14,7 +14,7 @@ local function get_spotify(STrack)
   local spotify = json:decode(decj)
   local Track = spotify.tracks.items.name
   local Surl = spotify.tracks.items.external_urls.spotify
-  local resu = 'Track is'..'Track..' URL: '..Surl
+  local resu = 'Track is '..Track..' URL: '..Surl
   
   return resu
 end
