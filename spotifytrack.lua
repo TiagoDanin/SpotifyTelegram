@@ -39,14 +39,10 @@ return {
   description = "✅ Track spotify byTiagoDanin",
   usage = "!spotify + Name Track",
   patterns = {
-    "^!spotify$",
-    "^!Spotify$",
-    "^!spotify (.*)$",
-    "^!Spotify (.*)$",
-    "^/spotify$",
-    "^/Spotify$",
-    "^/spotify (.*)$",
-    "^/Spotify (.*)$"
+    "^![Ss]potify$",
+    "^![Ss]potify (.*)$",
+    "^/[Ss]potify$",
+    "^/[Ss]potify (.*)$",
   },
   run = run
 }
