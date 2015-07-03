@@ -34,13 +34,19 @@ local function run(msg, matches)
   end
   return prints(tables)
 end
-
+--Run
 return {
   description = "✅ Track spotify byTiagoDanin",
   usage = "!spotify + Name Track",
   patterns = {
     "^!spotify$",
-    "^!spotify (.*)$"
+    "^!Spotify$",
+    "^!spotify (.*)$",
+    "^!Spotify (.*)$",
+    "^/spotify$",
+    "^/Spotify$",
+    "^/spotify (.*)$",
+    "^/Spotify (.*)$"
   },
   run = run
 }
