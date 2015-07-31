@@ -2,7 +2,7 @@
 --Get URL
 local function get_spotify(search)
   local BASE_URL = "https://api.spotify.com/v1/search"
-  local URLP = "?q=".. (URL.escape(search) or "").."&type=track&limit=3" --limit 3
+  local URLP = "?q=".. (URL.escape(search) or "").."&type=track&limit=3" --limit 5
 
   --decode json
   local decj, tim = https.request(BASE_URL..URLP)
@@ -12,6 +12,7 @@ local function get_spotify(search)
   local tables = {}
   for pri,result in ipairs(spotify.tracks.items) do
     table.insert(tables, {
+        spotify.tracks.total,
         result.name,
         result.external_urls.spotify
       })
@@ -20,23 +21,29 @@ local function get_spotify(search)
 end
 --Print table
 local function prints(tables)
+  --local total=""
+  --for pri,cont in ipairs(tables) do
+  --  total=cont[1]
+  --end
   local gets=""
   for pri,cont in ipairs(tables) do
-    gets=gets.."▶️ "..cont[1].." - "..cont[2].."\n"
+    gets=gets.."▶️ "..cont[2].." - "..cont[3].."\n"
   end
-  return gets
+  local thend = gets --.."Total "..total.."Music" -- OFF
+  return thend
 end
 
 local function run(msg, matches)
   local tables = get_spotify(matches[1])
-  if not tables then
-    tables = '🔴 Erro'
+  local text = prints(tables)
+  if text == "" then --Or if text == "Total  Music"
+    text = "Not found music" -- MSG Err
   end
-  return prints(tables)
+  return text
 end
 --Run
 return {
-  description = "✅ Track spotify byTiagoDanin",
+  description = "Track spotify byTiagoDanin",
   usage = "!spotify + Name Track",
   patterns = {
     "^![Ss]potify$",
