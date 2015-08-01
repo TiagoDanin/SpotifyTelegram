@@ -1,4 +1,5 @@
-# Plugin Spotify Telegram
+# Plugin Spotify Telegram</br>
+Based on https://github.com/yagop/telegram-bot</br>
 =================================================== </br>
 Thanks @ariefbayu Arief Bayu Purwanto </br>
 Thanks @TeIegrams Shayan </br>
