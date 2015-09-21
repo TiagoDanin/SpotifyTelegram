@@ -1,5 +1,5 @@
---Base
---Get URL
+-- Spotify Plugin for bot based on Yagop
+-- ByTiagoDanin - Telegram.me/tiagodanin
 local function get_spotify(search)
   local BASE_URL = "https://api.spotify.com/v1/search"
   local URLP = "?q=".. (URL.escape(search) or "").."&type=track&limit=5" --limit 5
