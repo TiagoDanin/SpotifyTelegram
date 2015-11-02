@@ -1,5 +1,5 @@
 -- Lastfm Plugin for bot based on Yagop
--- Glanced at https://github.com/yagop/telegram-bot/blob/master/plugins/lastfm.lua
+-- Glanced at https://github.com/topkecleon/otouto/blob/master/plugins/lastfm.lua
 -- byTiagoDanin
 function run(msg, matches, user)
   local username = matches[1]
