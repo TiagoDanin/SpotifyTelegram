@@ -3,9 +3,6 @@
 
 function run(msg, matches)
   local input = matches[1]
-  if input == "/spotify" or "/Spotify" or "!spotify" or "!Spotify" then -- FIX MATCHES
-    return "The name is missing"
-  end
   --URL API
   local BASE_URL = "https://api.spotify.com/v1/search"
   local URLP = "?q=".. (URL.escape(input) or "").."&type=track&limit=5" -- Limit 5
