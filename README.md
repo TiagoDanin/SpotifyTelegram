@@ -1,17 +1,19 @@
-# Plugin Spotify Telegram</br>
+#Spotify Telegram</br>
+**Spotify plugin for Telegram of search**
 
 ## Support
-Support|
--------|
-Based on https://github.com/yagop/telegram-bot</br>|
-Based on https://github.com/topkecleon/otouto V2</br>|
+Supports in bot based:
 
-## Bots running plugin:
-Bot|Telegram User|Language|
----|-------------|--------|
-@RoboED|https://telegram.me/ropoed|PT-BR
-@SiDbot|https://telegram.me/sidbot|PT-BR
-@CyberRobot|https://telegram.me/cyberrobot|PT-BR
+Project name|Project By|Plugin|
+------------|----------|------|
+[Telegram-bot](https://github.com/yagop/telegram-bot)|[Yagop](https://github.com/yagop)|[File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/BotBasedYagop/Spotify.lua)
+[Otouto V2](https://github.com/topkecleon/otouto/tree/3bd9d5302ee5a313a25d7940b982052614d176a9)|[Topkecleon](https://github.com/topkecleon)|[File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/BotBasedOtouto/V2/Spotify.lua)
+[Otouto V3](https://github.com/topkecleon/otouto)|[Topkecleon](https://github.com/topkecleon)|[File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/BotBasedOtouto/V3/Spotify.lua)
+[Polaris](https://github.com/luksireiku/polaris)|[luksireiku](https://github.com/luksireiku)|[File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/BotBasedPolaris/Spotify.py)
+
+</br></br>
+• [Bots running plugin](https://github.com/TiagoDanin/SpotifyTelegram/wiki/Bot-runnig-plugin)</br>
+</br>
 
 ## Soon '-'
 Function|Tag|
@@ -19,9 +21,11 @@ Function|Tag|
 * Search music ❤ | ✔
 * Scrobble (+Last.fm) | ✔️
 * Search artist | ✖
-
-#Thanks
-Thanks Community [Telegram Bots Development](https://telegram.me/joinchat/ALJ3iwFAhOCh4WNUHAyzXQ) and [CIS Bot Development](https://telegram.me/joinchat/05fe39f500f8f1b2d1548147a68acd2a)
 </br>
-API [Spotify](https://developer.spotify.com/web-api),
-Contact [Telegram](https://telegram.me/tiagodanin)
+#Thanks and Info
+Thanks [File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/Thanks.txt)</br>
+API [Spotify](https://developer.spotify.com/web-api),</br>
+My [Telegram](https://telegram.me/tiagodanin)</br>
+
+--- 
+>By Tiago Danin
