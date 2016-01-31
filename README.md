@@ -19,8 +19,10 @@ Project name|Project By|Plugin|
 Function|Tag|
 --------|---|
 * Search music ❤ | ✔
+* Search artist | ✔
+* Search album | ✔
+* Search playlist | ✔
 * Scrobble (+Last.fm) | ✔️
-* Search artist | ✖
 </br>
 #Thanks and Info
 Thanks [File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/Thanks.txt)</br>
