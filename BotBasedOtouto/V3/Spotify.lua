@@ -8,18 +8,57 @@ Returns results.
 
 Use /spotify [type] for custom search.
 Types: albums, artists, tracks, playlists
-Alias: /s, /spo
+Alias: /spo
+
+spotify:track:<ID> or Url of Spotify
+To view details of the music
 ```]]
 
 local triggers = {
     '^/spotify[@'..bot.username..']*',
     '^/spo[@'..bot.username..']*',
-    '^/s[@'..bot.username..']*'
+    '^spotify:track:',
+    '^https://open.spotify.com/track/'
 }
 
 local action = function(msg)
 
 	local input = msg.text:input()
+	
+	if string.match(msg.text:lower(), '^spotify:track:') or string.match(msg.text:lower(), '^https://open.spotify.com/track/') then
+		
+		input = msg.text:gsub('spotify:track:', '')
+		input = input:gsub('https://open.spotify.com/track/', '')
+		if input == '' then
+			return
+		end	
+		input = get_word(input, 1)
+		if input == '' then
+			return
+		end
+		
+		local url = 'https://api.spotify.com/v1/tracks/' .. URL.escape(input)
+		local jstr, res = HTTPS.request(url)
+		if res ~= 200 then
+			sendReply(msg, config.errors.connection)
+			return
+		end
+		local spotify = JSON.decode(jstr)
+		
+		local duration = math.floor(((0 + spotify.duration_ms)*10^-3)/60) .. 'Min'
+		local text = '[​]('..spotify.album.images[2].url..')'
+		text = text ..'*Artist:* ['..spotify.artists[1].name..']('..spotify.artists[1].external_urls.spotify..') \n'
+		text = text ..'*Music:* ['..spotify.name..']('..spotify.external_urls.spotify..') `('..duration..')` \n'
+		text = text ..'*Album:* ['..spotify.album.name..']('..spotify.album.external_urls.spotify..') `('..spotify.album.album_type..')`'
+		
+		sendMessage(msg.chat.id, text, false, nil, true)
+		local mp3 = download_file(spotify.preview_url, 'SPOTIFY'..spotify.id..'.mp3')
+		sendAudio(msg.chat.id, mp3, nil, nil, nil, spotify.name)
+		
+		return	
+	end
+
+	
 	if not input then
 		if msg.reply_to_message and msg.reply_to_message.text then
 			input = msg.reply_to_message.text
@@ -44,16 +83,16 @@ local action = function(msg)
 		input = input:gsub(get_word(input, 1), '')
 	end
 	
-    local url = 'https://api.spotify.com/v1/search?q='..(URL.escape(input) or '')..'&type='..type
+	local url = 'https://api.spotify.com/v1/search?q='..(URL.escape(input) or '')..'&type='..type
     
-    if msg.from.id == msg.chat.id then
+    	if msg.from.id == msg.chat.id then
 		url = url .. '&limit=8'
 	else
 		url = url .. '&limit=4'
 	end
     
-    local jstr, res = HTTPS.request(url)
-    if res ~= 200 then
+    	local jstr, res = HTTPS.request(url)
+	 if res ~= 200 then
 		sendReply(msg, config.errors.connection)
 		return
 	end
@@ -66,8 +105,8 @@ local action = function(msg)
 	    return
 	end
     
-    local output = '*Spotify results for*_' .. input .. '('..type..')' .. '_ *:*\n'
-    for i,v in ipairs(spotify[tostring(type)].items) do
+    	local output = '*Spotify results for*_' .. input .. '('..type..')' .. '_ *:*\n'
+    	for i,v in ipairs(spotify[tostring(type)].items) do
     	
     	local more = ''
     	if type == 'tracks' then
