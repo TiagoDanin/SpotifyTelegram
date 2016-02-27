@@ -48,8 +48,8 @@ def run(msg):
 		title = spotify['tracks']['items'][i]['name'] +  ' - ' + spotify['tracks']['items'][i]['album']['name']
 		if len(str(title)) > 48:
 			title = title[:44] +  '...'
-			stitle = title.replace('[', ' |').replace(']', '| ').replace('(', '').replace(')', '')
-			surl = spotify['tracks']['items'][i]['external_urls']['spotify']
+		stitle = title.replace('[', ' |').replace(']', '| ').replace('(', '').replace(')', '')
+		surl = spotify['tracks']['items'][i]['external_urls']['spotify']
 		text += U'• [' + stitle + '](' + surl + ')\n\n'
 
-		send_message(msg['chat']['id'], text, parse_mode="Markdown")
+	send_message(msg['chat']['id'], text, parse_mode="Markdown")
