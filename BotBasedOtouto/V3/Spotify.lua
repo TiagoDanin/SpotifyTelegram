@@ -105,9 +105,8 @@ local action = function(msg)
 		return
 	end
 
-		local output = '*Spotify results for*_' .. input .. '('..type..')' .. '_ *:*\n'
-		for i,v in ipairs(spotify[tostring(type)].items) do
-
+	local output = '*Spotify results for*_' .. input .. '('..type..')' .. '_ *:*\n'
+	for i,v in ipairs(spotify[tostring(type)].items) do
 		local more = ''
 		if type == 'tracks' then
 		more = ' - '..spotify.tracks.items[i].album.name
@@ -117,7 +116,8 @@ local action = function(msg)
 			more = ' - '..spotify.playlists.items[i].owner.id
 		end
 
-		local title = (spotify[tostring(type)].items[i].name .. more):gsub('%[.+%]', ''):gsub('&amp;', '&')
+		local title = spotify[tostring(type)].items[i].name .. more
+		title = title:gsub('%[.+%]', ''):gsub('&amp;', '&')
 		if title:len() > 45 then
 			title = title:sub(1, 42) .. '...'
 		end

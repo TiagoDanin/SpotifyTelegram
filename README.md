@@ -11,9 +11,14 @@ Project name|Project By|Plugin|
 [Otouto V3](https://github.com/topkecleon/otouto)|[Topkecleon](https://github.com/topkecleon)|[File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/BotBasedOtouto/V3/Spotify.lua)
 [Polaris](https://github.com/luksireiku/polaris)|[luksireiku](https://github.com/luksireiku)|[File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/BotBasedPolaris/Spotify.py)
 
-</br></br>
-• [Bots running plugin](https://github.com/TiagoDanin/SpotifyTelegram/wiki/Bot-runnig-plugin)</br>
+Other Git:
+
+Project name|Project By|Plugin|
+------------|----------|------|
+[Jack-Telegram-Bot](https://github.com/SEEDTEAM/jack-telegram-bot)|[Seedteam](https://github.com/SEEDTEAM/)|[File](https://github.com/SEEDTEAM/jack-telegram-bot/blob/master/plugins/spotify.moon)
+
 </br>
+• [Bots running plugin](https://github.com/TiagoDanin/SpotifyTelegram/wiki/Bot-runnig-plugin)</br>
 
 ## Soon '-'
 Function|Tag|
@@ -26,8 +31,8 @@ Function|Tag|
 </br>
 #Thanks and Info
 Thanks [File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/Thanks.txt)</br>
-API [Spotify](https://developer.spotify.com/web-api),</br>
+API [Spotify](https://developer.spotify.com/web-api)</br>
 My [Telegram](https://telegram.me/tiagodanin)</br>
 
---- 
+---
 >By Tiago Danin
