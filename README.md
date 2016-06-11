@@ -1,4 +1,4 @@
-#Spotify Telegram</br>
+# Spotify Telegram</br>
 **Spotify plugin for Telegram of search**
 
 ## Support
@@ -29,7 +29,7 @@ Function|Tag|
 * Search playlist | ✔
 * Scrobble (+Last.fm) | ✔️
 </br>
-#Thanks and Info
+# Thanks and Info
 Thanks [File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/Thanks.txt)</br>
 API [Spotify](https://developer.spotify.com/web-api)</br>
 My [Telegram](https://telegram.me/tiagodanin)</br>
