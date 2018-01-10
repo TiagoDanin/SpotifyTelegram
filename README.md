@@ -1,4 +1,7 @@
 # Spotify Telegram</br>
+
+**🚧 Project Discontinued**
+
 **Spotify plugin for Telegram of search**
 
 ## Support
@@ -17,8 +20,8 @@ Project name|Project By|Plugin|
 ------------|----------|------|
 [Jack-Telegram-Bot](https://github.com/SEEDTEAM/jack-telegram-bot)|[Seedteam](https://github.com/SEEDTEAM/)|[File](https://github.com/SEEDTEAM/jack-telegram-bot/blob/master/plugins/spotify.moon)
 
-</br>
-• [Bots running plugin](https://github.com/TiagoDanin/SpotifyTelegram/wiki/Bot-runnig-plugin)</br>
+
+• [Bots running plugin](https://github.com/TiagoDanin/SpotifyTelegram/wiki/Bot-runnig-plugin)
 
 ## Soon '-'
 Function|Tag|
@@ -28,11 +31,15 @@ Function|Tag|
 * Search album | ✔
 * Search playlist | ✔
 * Scrobble (+Last.fm) | ✔️
-</br>
+
+
 # Thanks and Info
-Thanks [File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/Thanks.txt)</br>
-API [Spotify](https://developer.spotify.com/web-api)</br>
-My [Telegram](https://telegram.me/tiagodanin)</br>
+
+Thanks [File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/Thanks.txt)
+
+API [Spotify](https://developer.spotify.com/web-api)
+
+My [Telegram](https://telegram.me/tiagodanin)
 
 ---
 >By Tiago Danin
