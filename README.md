@@ -23,17 +23,16 @@ Project name|Project By|Plugin|
 
 • [Bots running plugin](https://github.com/TiagoDanin/SpotifyTelegram/wiki/Bot-runnig-plugin)
 
-## Soon '-'
+## TO-DO
 Function|Tag|
 --------|---|
 * Search music ❤ | ✔
 * Search artist | ✔
 * Search album | ✔
 * Search playlist | ✔
-* Scrobble (+Last.fm) | ✔️
+* Scrobble (+Last.fm) | ✔
 
-
-# Thanks and Info
+# Thanks & Info
 
 Thanks [File](https://github.com/TiagoDanin/SpotifyTelegram/blob/master/Thanks.txt)
 
